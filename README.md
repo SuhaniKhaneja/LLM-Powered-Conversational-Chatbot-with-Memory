@@ -31,4 +31,34 @@ User input is stored in a session and passed along with previous conversation hi
 
 ### 1. Install dependencies
 ```bash
-pip install -r requirements.txt
+pip install fastapi uvicorn transformers torch
+
+
+### 2. Start server
+uvicorn app:app --reload
+
+### 3. Open API docs
+http://127.0.0.1:8000/docs
+
+
+http://127.0.0.1:8000/docs
+
+
+---
+
+## 🔌 API Usage
+
+### POST /chat
+
+#### Request:
+```json
+{
+  "message": "Hello",
+  "session_id": "optional"
+}
+
+
+{
+  "session_id": "abc123",
+  "bot_response": "Hi! How can I help you?"
+}
